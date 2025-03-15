@@ -1,7 +1,7 @@
 import React from 'react'
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer'
 import { View, Image, Text } from 'react-native'
-import { Feather, AntDesign, MaterialIcons, Ionicons } from '@expo/vector-icons'
+import { Feather, MaterialIcons, Ionicons } from '@expo/vector-icons'
 import { router, usePathname } from 'expo-router'
 import { StyleSheet } from 'react-native'
 
@@ -12,86 +12,86 @@ const CustomDrawerContent = (props) => {
       <DrawerContentScrollView {...props}>
         <View style={styles.userInfoWrapper}>
           <Image
-            source={{ uri: "https://randomuser.me/api/portraits/women/26.jpg" }}
+            source={{ uri: "https://kenntnisreich-kindertagesstaetten.de/wp-content/uploads/2022/01/claudia_lotz.png" }}
             width={80}
             height={80}
             style={styles.userImg}
           />
           <View style={styles.userDetailsWrapper}>
-            <Text style={styles.userName}>John Doe</Text>
-            <Text style={styles.userEmail}>john@email.com</Text>
+            <Text style={styles.userName}>Claudia Lotz</Text>
+            <Text style={styles.userEmail}>claudia.lotz@berlin.de</Text>
           </View>
         </View>
         <DrawerItem
           icon={({ color, size }) => (
             <Feather
-              name="list"
+              name="user-x"
               size={size}
-              color={pathname == "/feed" ? "#fff" : "#000"}
+              color={pathname == "/menu" ? "#fff" : "#000"}
             />
           )}
-          label={"Feed"}
+          label={"Kind abmelden"}
           labelStyle={[
             styles.navItemLabel,
-            { color: pathname == "/feed" ? "#fff" : "#000" },
+            { color: pathname == "/menu" ? "#fff" : "#000" },
           ]}
-          style={{ backgroundColor: pathname == "/feed" ? "#333" : "#fff" }}
+          style={{ backgroundColor: pathname == "/menu" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/(drawer)/(tabs)/feed");
+            router.push("/(drawer)/(tabs)/menu");
           }}
         />
         <DrawerItem
           icon={({ color, size }) => (
-            <AntDesign
+            <Feather
               name="user"
               size={size}
-              color={pathname == "/profile" ? "#fff" : "#000"}
+              color={pathname == "/user/profile" ? "#fff" : "#000"}
             />
           )}
-          label={"Profile"}
+          label={"Profil"}
           labelStyle={[
             styles.navItemLabel,
-            { color: pathname == "/profile" ? "#fff" : "#000" },
+            { color: pathname == "/user/profile" ? "#fff" : "#000" },
           ]}
-          style={{ backgroundColor: pathname == "/profile" ? "#333" : "#fff" }}
+          style={{ backgroundColor: pathname == "/user/profile" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/(drawer)/(tabs)/profile");
+            router.push("/user/profile");
           }}
         />
         <DrawerItem
           icon={({ color, size }) => (
-            <MaterialIcons
-              name="favorite-outline"
+            <Feather
+              name="settings"
               size={size}
-              color={pathname == "/favourites" ? "#fff" : "#000"}
+              color={pathname == "/user/settings" ? "#fff" : "#000"}
             />
           )}
-          label={"Favourites"}
+          label={"Einstellungen"}
           labelStyle={[
             styles.navItemLabel,
-            { color: pathname == "/favourites" ? "#fff" : "#000" },
+            { color: pathname == "/user/settings" ? "#fff" : "#000" },
           ]}
-          style={{ backgroundColor: pathname == "/favourites" ? "#333" : "#fff" }}
+          style={{ backgroundColor: pathname == "/user/settings" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/favourites");
+            router.push("/user/settings");
           }}
         />
         <DrawerItem
           icon={({ color, size }) => (
-            <Ionicons
-              name="settings-outline"
+            <Feather
+              name="log-out"
               size={size}
-              color={pathname == "/settings" ? "#fff" : "#000"}
+              color={pathname == "/" ? "#fff" : "#000"}
             />
           )}
-          label={"Settings"}
+          label={"Abmelden"}
           labelStyle={[
             styles.navItemLabel,
-            { color: pathname == "/settings" ? "#fff" : "#000" },
+            { color: pathname == "/" ? "#fff" : "#000" },
           ]}
-          style={{ backgroundColor: pathname == "/settings" ? "#333" : "#fff" }}
+          style={{ backgroundColor: pathname == "/" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/settings");
+            router.push("/");
           }}
         />
       </DrawerContentScrollView>
