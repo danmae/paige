@@ -1,11 +1,10 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ScrollView, Image, Button } from "react-native"; // Import Image component
-import { Link, Redirect, router } from "expo-router";
+import { Text, View, ScrollView, Image } from "react-native";
+import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import images from '../constants/images';
-import CustomButton from "../components/CustomButton";
-import FormField from "../components/FormField";
 import { useState } from "react";
+import images from '../constants/images'; // import paige images
+import CustomButton from "../components/CustomButton"; // import custombutton component
+import FormField from "../components/FormField"; // import custom formfield component
 
 export default function App(){
     const [form, setForm] = useState({
