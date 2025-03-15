@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import { router, Tabs } from 'expo-router';
-import icons from '../../constants/icons';
+import icons from '../../../constants/icons';
 import { Ionicons } from '@expo/vector-icons';
-import images from '../../constants/images';
+import images from '../../../constants/images';
+import { DrawerToggleButton } from '@react-navigation/drawer';
 
 const TabIcon = ({ icon, name, color, focused }) => {
   return (
@@ -40,9 +41,9 @@ const TabsLayout = () => {
         },
         headerTintColor: "#FFFFFF",
         // Add the left icon to all tab screens
-        headerLeft: () => (
+        headerRight: () => (
           <TouchableOpacity
-            className={"ml-4"}
+            className={"mr-4"}
             onPress={() => router.push("/")}
           >
             <Image
@@ -52,14 +53,7 @@ const TabsLayout = () => {
             />
           </TouchableOpacity>
         ),
-        headerRight: () => (
-          <TouchableOpacity
-            className={"mr-4"}
-            onPress={() => console.log('Right header icon pressed')}
-          >
-            <Ionicons name="menu" size={24} color="#FFFFFF" />
-          </TouchableOpacity>
-        )
+        headerLeft: () => <DrawerToggleButton tintColor='#000' />
       }}
       >
         <Tabs.Screen 
