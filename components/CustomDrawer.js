@@ -27,17 +27,17 @@ const CustomDrawerContent = (props) => {
             <Feather
               name="user-x"
               size={size}
-              color={pathname == "/menu" ? "#fff" : "#000"}
+              color={pathname == "/absence" ? "#fff" : "#000"}
             />
           )}
           label={"Kind abmelden"}
           labelStyle={[
             styles.navItemLabel,
-            { color: pathname == "/menu" ? "#fff" : "#000" },
+            { color: pathname == "/absence" ? "#fff" : "#000" },
           ]}
-          style={{ backgroundColor: pathname == "/menu" ? "#333" : "#fff" }}
+          style={{ backgroundColor: pathname == "/absence" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/(drawer)/(tabs)/menu");
+            router.push("/(drawer)/(tabs)/(user)/absence");
           }}
         />
         <DrawerItem
@@ -45,17 +45,17 @@ const CustomDrawerContent = (props) => {
             <Feather
               name="user"
               size={size}
-              color={pathname == "/user/profile" ? "#fff" : "#000"}
+              color={pathname == "/profile" ? "#fff" : "#000"}
             />
           )}
           label={"Profil"}
           labelStyle={[
             styles.navItemLabel,
-            { color: pathname == "/user/profile" ? "#fff" : "#000" },
+            { color: pathname == "/profile" ? "#fff" : "#000" },
           ]}
-          style={{ backgroundColor: pathname == "/user/profile" ? "#333" : "#fff" }}
+          style={{ backgroundColor: pathname == "/profile" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/user/profile");
+            router.push("/(drawer)/(tabs)/(user)/profile");
           }}
         />
         <DrawerItem
@@ -63,17 +63,17 @@ const CustomDrawerContent = (props) => {
             <Feather
               name="settings"
               size={size}
-              color={pathname == "/user/settings" ? "#fff" : "#000"}
+              color={pathname == "/settings" ? "#fff" : "#000"}
             />
           )}
           label={"Einstellungen"}
           labelStyle={[
             styles.navItemLabel,
-            { color: pathname == "/user/settings" ? "#fff" : "#000" },
+            { color: pathname == "/settings" ? "#fff" : "#000" },
           ]}
-          style={{ backgroundColor: pathname == "/user/settings" ? "#333" : "#fff" }}
+          style={{ backgroundColor: pathname == "/settings" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/user/settings");
+            router.push("/(drawer)/(tabs)/(user)/settings");
           }}
         />
         <DrawerItem

@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import { router, Tabs } from 'expo-router';
-import icons from '../../../constants/icons';
-import { Ionicons } from '@expo/vector-icons';
-import images from '../../../constants/images';
 import { DrawerToggleButton } from '@react-navigation/drawer';
+import images from '../../../constants/images';
+import icons from '../../../constants/icons';
 
 const TabIcon = ({ icon, name, color, focused }) => {
   return (
