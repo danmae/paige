@@ -37,7 +37,7 @@ const CustomDrawerContent = (props) => {
           ]}
           style={{ backgroundColor: pathname == "/absence" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/(drawer)/(tabs)/(user)/absence");
+            router.push("/absence");
           }}
         />
         <DrawerItem
@@ -55,7 +55,7 @@ const CustomDrawerContent = (props) => {
           ]}
           style={{ backgroundColor: pathname == "/profile" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/(drawer)/(tabs)/(user)/profile");
+            router.push("/profile");
           }}
         />
         <DrawerItem
@@ -73,7 +73,7 @@ const CustomDrawerContent = (props) => {
           ]}
           style={{ backgroundColor: pathname == "/settings" ? "#333" : "#fff" }}
           onPress={() => {
-            router.push("/(drawer)/(tabs)/(user)/settings");
+            router.push("/settings");
           }}
         />
         <DrawerItem
