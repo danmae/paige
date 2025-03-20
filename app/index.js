@@ -36,7 +36,7 @@ export default function App(){
                     />
                     <CustomButton
                         title="Login"
-                        handlePress={() => router.push("(drawer)/(tabs)/calendar")}
+                        handlePress={() => router.push("/calendar")}
                         containerStyles="w-full mt-6"
                     /> 
                     <Text className="mt-3">
